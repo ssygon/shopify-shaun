@@ -173,9 +173,15 @@
                 {%- endif -%}
               </p>
             {%- when 'description' -%}
+
+                          
             
+              {%- if product.title != blank -%}
+                <h1>{{ product.title | upcase }}</h1>                
+              {%- endif -%}            
+                          
               {%- if product.description != blank -%}
-                <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                <div class="product__description rte">
                   {{ product.description }}
                 </div>                
               {%- endif -%}
@@ -196,7 +202,8 @@
               <strong>Filters e.g. If price is stored as 3050</strong>
               <p>Price: {{ product.price}}</p>
               <p>Price: {{ product.price | money }}</p>
-                          
+
+              
             
             {%- when 'sku' -%}
               <p

@@ -191,6 +191,9 @@
                 <a target="_blank" href="{{ product.metafields.custom.vendor_url }}">{{ product.metafields.custom.vendor_url }}</a>
               </div>
               {%- endif -%}
+
+              <p>Price: {{ product.price}}</p>
+              <p>Price: {{ product.price | money }}</p>
             
             {%- when 'sku' -%}
               <p

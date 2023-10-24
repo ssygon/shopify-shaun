@@ -181,10 +181,6 @@
               {%- if product.title != blank -%}
                 <h1>{{ product.title | upcase }}</h1>                
               {%- endif -%}
-            
-              {%- if product.title != blank -%}
-                <h1>{{ product.title | escape }}</h1>                
-              {%- endif -%}
                           
               {%- if product.description != blank -%}
                 <div class="product__description rte">

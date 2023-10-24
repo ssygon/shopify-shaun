@@ -182,11 +182,8 @@
                 <h1>{{ product.title | upcase }}</h1>                
               {%- endif -%}
 
-              {% if product.title contains "Shaun" %}
-                <p>This product has been tagged with "Shaun".</p>
-              {% endif %}
-
-              {% assign product_title_uppercase = product.title | upcase %}
+            
+              {% assign product_title_uppercase = product.title | upcase %} <!-- This will WORK -->
               {% if product_title_uppercase contains "SHAUN" %}
                 <p>This product has been tagged with "Shaun".</p>
               {% endif %}

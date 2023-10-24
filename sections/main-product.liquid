@@ -181,12 +181,22 @@
               {%- if product.title != blank -%}
                 <h1>{{ product.title | upcase }}</h1>                
               {%- endif -%}
+
                           
               {%- if product.description != blank -%}
                 <div class="product__description rte">
                   {{ product.description }}
                 </div>                
               {%- endif -%}
+
+            
+              {%- if product.price != blank -%}
+                <strong>Filters e.g. If price is stored as 3050</strong>
+                <p>Price: {{ product.price}}</p>
+                <p>Price: {{ product.price | money }} {{ shop.currency }}</p>
+              {%- endif -%}      
+
+                          
 
               {%- if product.metafields.custom.volume != blank -%}
               <div class="product__volume rte">
@@ -201,9 +211,7 @@
               {%- endif -%}
 
               
-              <strong>Filters e.g. If price is stored as 3050</strong>
-              <p>Price: {{ product.price}}</p>
-              <p>Price: {{ product.price | money }}</p>
+
 
               
             

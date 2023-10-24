@@ -183,7 +183,7 @@
               {%- endif -%}
             
               {%- if product.title != blank -%}
-                <h1>{{ product.title | upcase | escape }}</h1>                
+                <h1>{{ product.title | escape }}</h1>                
               {%- endif -%}
                           
               {%- if product.description != blank -%}

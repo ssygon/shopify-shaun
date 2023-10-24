@@ -182,6 +182,9 @@
                 <h1>{{ product.title | upcase }}</h1>                
               {%- endif -%}
 
+              {% if product.title contains "Shaun" %}
+                <p>This product has been tagged with "Shaun".</p>
+              {% endif %}
                           
               {%- if product.description != blank -%}
                 <div class="product__description rte">

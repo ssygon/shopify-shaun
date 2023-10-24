@@ -185,6 +185,11 @@
               {% if product.title contains "Shaun" %}
                 <p>This product has been tagged with "Shaun".</p>
               {% endif %}
+
+              {% assign product_title_uppercase = product.title | upcase %}
+              {% if product_title_uppercase contains "SHAUN" %}
+                <p>This product has been tagged with "Shaun".</p>
+              {% endif %}
                           
               {%- if product.description != blank -%}
                 <div class="product__description rte">

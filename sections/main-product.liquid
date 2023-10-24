@@ -196,10 +196,11 @@
 
             
               {%- if product.price != blank -%}
-                <strong>Filters e.g. If price is $30.50</strong>
-                <p>Price: {{ product.price}}</p>
-                <p>Price: {{ product.price | money }} {{ shop.currency }}</p>
-              {%- endif -%}      
+                <strong>Filters e.g. If product price is $30.50</strong>
+                <p>NO $ and NO currency symbol: {{ product.price | money_without_currency }}</p>
+                <p>WITH $ and NO currency symbol: {{ product.price | money }}</p>
+                <p>WITH $ and WITH currency symbol: {{ product.price | money_with_currency }}</p>
+              {%- endif -%}
 
                           
 

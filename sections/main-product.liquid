@@ -174,7 +174,9 @@
               </p>
             {%- when 'description' -%}
 
-                          
+              {%- if product.title != blank -%}
+                <h1>{{ product.title }}</h1>                
+              {%- endif -%}          
             
               {%- if product.title != blank -%}
                 <h1>{{ product.title | upcase }}</h1>                
